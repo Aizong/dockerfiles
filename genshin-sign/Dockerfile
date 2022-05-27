@@ -4,7 +4,7 @@ ENV TZ=Asia/Shanghai
 
 RUN apk --update add wget unzip  \
     && wget -q --no-cache --no-check-certificate https://github.com/sirodeneko/genshin-sign/archive/refs/heads/master.zip -O /tmp/master.zip \
-    && unzip -j /tmp/master.zip -d /app && rm  /tmp/master.zip \
+    && unzip -o /tmp/master.zip -d /app && rm  /tmp/master.zip \
     && ls -ahl /app \
     && pip3 install -r /app/requirements.txt \
     && apk del wget unzip \
