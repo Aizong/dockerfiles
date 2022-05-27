@@ -26,10 +26,22 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
-        name: Build and push
+        name: Build and push genshin-sign
         uses: docker/build-push-action@v3
         with:
           context: "{{defaultContext}}:genshin-sign"
           platforms: linux/amd64,linux/arm64,linux/arm
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/genshin-sign:latest
+          tags: | 
+            ${{ secrets.DOCKERHUB_USERNAME }}/genshin-sign:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/genshin-sign:${{ env.VER }}
+
+        name: Build and push AutoMihoyoBBS
+        uses: docker/build-push-action@v3
+        with:
+          context: "{{defaultContext}}:AutoMihoyoBBS"
+          platforms: linux/amd64,linux/arm64,linux/arm
+          push: true
+          tags: | 
+            ${{ secrets.DOCKERHUB_USERNAME }}/AutoMihoyoBBS:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/AutoMihoyoBBS:${{ env.VER }}
