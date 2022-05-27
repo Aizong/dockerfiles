@@ -6,7 +6,7 @@ docker run \
 --network bridge \
 --env CRON_SIGNIN='30 9 * * *' \
 --env TZ=Asia/Shanghai \
--v /your/config/path:/app/config \
+-v /your/config/path:/var/app/config \
 vincent5/automihoyobbs:latest
 ```
 

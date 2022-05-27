@@ -34,7 +34,7 @@ jobs:
           push: true
           tags: | 
             ${{ secrets.DOCKERHUB_USERNAME }}/genshin-sign:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/genshin-sign:20220527
+            ${{ secrets.DOCKERHUB_USERNAME }}/genshin-sign:20220528
       -
         name: Build and push AutoMihoyoBBS
         uses: docker/build-push-action@v3
@@ -44,4 +44,4 @@ jobs:
           push: true
           tags: | 
             ${{ secrets.DOCKERHUB_USERNAME }}/automihoyobbs:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/automihoyobbs:20220527
+            ${{ secrets.DOCKERHUB_USERNAME }}/automihoyobbs:20220528
