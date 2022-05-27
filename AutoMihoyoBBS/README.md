@@ -12,5 +12,5 @@ vincent5/automihoyobbs:latest
 
 # 参数配置
 
-参见https://github.com/Womsxd/AutoMihoyoBBS/tree/master/config
+参见https://github.com/Womsxd/AutoMihoyoBBS/tree/master/config，修改映射目录中的配置文件
 
