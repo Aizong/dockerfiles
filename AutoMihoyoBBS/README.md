@@ -7,7 +7,7 @@ docker run \
 --env CRON_SIGNIN='30 9 * * *' \
 --env TZ=Asia/Shanghai \
 -v /your/config/path:/app/config \
-vincent5/AutoMihoyoBBS:latest
+vincent5/automihoyobbs:latest
 ```
 
 # 参数配置
