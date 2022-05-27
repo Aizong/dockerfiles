@@ -15,8 +15,8 @@ vincent5/genshin-sign:latest
 ```
 # 单次运行
 docker run \
---network bridge
---env CRON_SIGNIN='30 9 * * *' \
+--network bridge \
+--name genshin-sign \
 --env TZ=Asia/Shanghai \
 --env COOKIE='your cookie str' \
 vincent5/genshin-sign:latest  python3 ./genshin.py
