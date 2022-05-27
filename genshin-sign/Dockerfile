@@ -2,8 +2,6 @@ FROM python:3-alpine
 ENV CRON_SIGNIN='30 9 * * *'
 ENV TZ=Asia/Shanghai
 
-ARG VER=1.6.11
-
 RUN apk --update add wget unzip  \
     && wget -q --no-cache --no-check-certificate https://github.com/sirodeneko/genshin-sign/archive/refs/heads/master.zip -O /tmp/master.zip \
     && unzip -j /tmp/master.zip -d /app && rm  /tmp/master.zip \
