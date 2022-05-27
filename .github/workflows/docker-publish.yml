@@ -35,7 +35,7 @@ jobs:
           tags: | 
             ${{ secrets.DOCKERHUB_USERNAME }}/genshin-sign:latest
             ${{ secrets.DOCKERHUB_USERNAME }}/genshin-sign:${{ env.VER }}
-
+      -
         name: Build and push AutoMihoyoBBS
         uses: docker/build-push-action@v3
         with:
